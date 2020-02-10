@@ -1,0 +1,48 @@
+/* The styling below is to remove up/down arrows from input/number elements */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.activity-form {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+}
+
+.activity-form__label {
+  font-size: 1.25rem;
+  margin: .5rem;
+}
+
+.activity-form__input {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  padding-left: .5rem;
+}
+
+.activity-form__input--short {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  padding-left: .5rem;
+  margin-left: .5rem;
+  width: 2rem;
+}
+
+.activity-form__row-grouping {
+  margin-top: .75rem;
+  flex-direction: row;
+}
+
+.activity-form__button {
+  /* flex allows for individual alignment */
+  align-self: center;
+  margin-top: 2rem;
+  width: 20rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  background-color: #5B879B;
+  color: white;
+  cursor: pointer;
+}

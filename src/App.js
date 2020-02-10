@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Navigation from './Navigation/Navigation';
+import Home from './Home';
+import ProgressTracker from './ProgressTracker/ProgressTracker';
+import Planner from './Planner/Planner';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="goal-manifest">
+        <header>
+          <Navigation />
+        </header>
+        
+        <main>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/tracker" component={ProgressTracker} />
+            <Route exact path="/planner" component={Planner} />  
+          </Switch>
+        </main>
+        
+        <footer>
+
+        </footer>
+      </div>
+    );
+  }
 }
 
 export default App;

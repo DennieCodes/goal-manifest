@@ -1,0 +1,39 @@
+.goal-card {
+  /* width: 90vw; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 3.5rem;
+}
+
+.goal-card__title {
+  /* color: #07441F; */
+  font-size: 2rem;
+  font-weight: 600;
+  word-wrap: wrap;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.goal-card__desc {
+  background-color: #BDDDEA;
+  font-size: 1.5rem;
+  word-wrap: wrap;
+  padding: 1rem; 
+}
+
+.goal-subcard {
+  /* width: 100%; */
+  margin: 2rem;
+}
+
+.goal-card__dates {
+  font-size: 1.4rem;
+}
+
+.goal-card__label {
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+.milestone__list {
+  background: #ededed;
+}

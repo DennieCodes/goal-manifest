@@ -14,7 +14,7 @@ class App extends Component {
           <Navigation />
         </header>
         
-        <main>
+        <main className="main">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/tracker" component={ProgressTracker} />

@@ -12,3 +12,7 @@ a {
   flex-direction: column;
 }
 
+.main {
+  margin: 3rem 5rem;
+}
+

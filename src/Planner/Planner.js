@@ -1,31 +1,54 @@
 import React, { Component } from 'react';
 import Goal from './Goal';
 import GoalForm from './GoalForm';
+import uuid from 'uuid/v4';
 import './Planner.css';
 
 export default class Planner extends Component {
   constructor(props) {
     super(props);
-    this.state = { goals: [] }
+    this.state = { goal: [] }
   
+    this.addGoal = this.addGoal.bind(this);
   }
   
+  // Function that adds the goal from GoalForm onto the state array: goal
+  addGoal(goal) {
+    let newGoal = {...goal, id: uuid()};
+
+    this.setState(state => ({
+      goal: [...state.goal, newGoal]
+    }));
+  }
+
   render() {
-    let description = "My goal is to be ready to apply for jobs by April 1st so I'd like to have my portfolio and two full stack projects in live production";
-    let milestones = [{title: "1st milestone", desc: "first milestone", target: "02/17/20", actual: "02/10/20"}];
+
+    // Temporary values for testing
+    let tempMilestones = [{          
+      title: 'Milestone',
+      desc: 'Do something by',
+      target: '08/01/2020',
+      actual: '02/10/2020'
+    }];
+
+    let goals = this.state.goal.map(goal => {
+      return (
+        <Goal 
+          title={goal.title}
+          desc={goal.desc }
+          start={goal.start}
+          target={goal.target}
+          key={goal.id}
+          id={goal.id}
+          milestones={tempMilestones}
+        />
+      );
+    });
 
     return (
       <div className="planner">        
-        <Goal 
-          title={"Be job ready by April 1st"}
-          desc={description }
-          start={"02/10/20"}
-          target={"04/01/20"}
-          id={'ABCD'}
-          milestones={milestones}
-        />
-        
-        <GoalForm />
+        {goals}
+        <GoalForm addGoal={this.addGoal}/>
       </div>
     )
   }

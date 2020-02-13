@@ -1,5 +1,5 @@
 .goal-card {
-  /* width: 90vw; */
+  width: 42%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 3.5rem;
 }
@@ -14,7 +14,7 @@
 }
 
 .goal-card__desc {
-  background-color: #BDDDEA;
+  background-color: #ededed;
   font-size: 1.5rem;
   word-wrap: wrap;
   padding: 1rem; 
@@ -32,8 +32,44 @@
 .goal-card__label {
   margin-left: 1rem;
   font-weight: 600;
+  color: #003333;
 }
 
-.milestone__list {
-  background: #ededed;
+.milestone__table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1.25rem;
+  
+}
+
+.milestone-header {
+  height: 2.5rem;
+  background-color: #BDDDEA;
+}
+
+
+.milestone-header > th{
+  border: 2px solid #5B879B;
+}
+
+.milestone-title {
+  width: 15rem;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+.milestone-desc {
+  width: 30rem;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+.milestone-date {
+  width: 5rem;
+  text-align: center;
+}
+
+.milestone__row > td{
+  height: 2.25rem;
+  border: 2px solid #5B879B;
 }

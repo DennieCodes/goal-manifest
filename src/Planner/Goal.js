@@ -28,9 +28,22 @@ export default class Goal extends Component {
 
         <section className="goal-subcard">
           <h2 className="goal-subcard__title">Milestones</h2>
-          <ul className="milestone__list">
-            {milestones}
-          </ul>
+          
+          <table className="milestone__table">
+            <thead>
+              <tr className="milestone-header">
+                <th className="milestone-title">Title</th>
+                <th className="milestone-desc">Description</th>
+                <th className="milestone-date">Target Date</th>
+                <th className="milestone-date">Finish Date</th>
+              </tr>
+            </thead>
+          
+            <tbody>
+                {milestones}
+            </tbody>
+          </table>
+
         </section>
       </div>
     )

@@ -10,15 +10,43 @@ export default class Planner extends Component {
     this.state = { goal: [] }
   
     this.addGoal = this.addGoal.bind(this);
+    this.updateLocalStorage = this.updateLocalStorage.bind(this);
   }
   
   // Function that adds the goal from GoalForm onto the state array: goal
   addGoal(goal) {
-    let newGoal = {...goal, id: uuid()};
+
+    // You need to parse the target date to the correct format below
+    // yyyy/mm/dd
+    // str.substr(start, length)
+    let parsedTarget = `${goal.target.substr(8, 2)}/${goal.target.substr(5, 2)}/${goal.target.substr(0, 4)}`;
+    goal.target = parsedTarget;
+
+    let curDate = new Date();
+    let parseDate = `${curDate.getMonth()+1}/${curDate.getDate()}/${curDate.getFullYear()}`;
+    
+    let newGoal = {...goal, id: uuid(), start: parseDate, milestones: [{}]};
 
     this.setState(state => ({
       goal: [...state.goal, newGoal]
     }));
+  }
+
+  componentDidMount() {
+    this.setState({
+      goal: JSON.parse(window.localStorage.getItem("goal")) || []
+    });
+  }
+
+  // Function that executes whenever changes affect the React component
+  componentDidUpdate() {
+    console.log('Component Updated');
+    this.updateLocalStorage();
+  }
+
+  // Function that stores locally any changes to activity
+  updateLocalStorage() {
+    window.localStorage.setItem("goal", JSON.stringify(this.state.goal));
   }
 
   render() {
@@ -46,9 +74,11 @@ export default class Planner extends Component {
     });
 
     return (
-      <div className="planner">        
-        {goals}
-        <GoalForm addGoal={this.addGoal}/>
+      <div className="planner">
+        <section className="section--row">
+          {goals}
+          <GoalForm addGoal={this.addGoal}/>        
+        </section>
       </div>
     )
   }

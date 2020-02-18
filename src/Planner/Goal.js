@@ -14,10 +14,10 @@ export default class Goal extends Component {
         />
       )
     });
-
+    
     return (
       <div className="goal-card">
-        <header>
+        <header className="goal-card-header">
           <h2 className="goal-card__title">{this.props.title}</h2>
           <p className="goal-card__desc">{this.props.desc}</p>
           <p className="goal-card__dates">
@@ -40,7 +40,7 @@ export default class Goal extends Component {
             </thead>
           
             <tbody>
-                {milestones}
+              {milestones}
             </tbody>
           </table>
 

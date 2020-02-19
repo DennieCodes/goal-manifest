@@ -10,6 +10,7 @@ export default class Planner extends Component {
     this.state = { goal: [] }
   
     this.addGoal = this.addGoal.bind(this);
+    this.updateGoal = this.updateGoal.bind(this);
     this.updateLocalStorage = this.updateLocalStorage.bind(this);
   }
   
@@ -21,11 +22,41 @@ export default class Planner extends Component {
     let curDate = new Date();
     let parseDate = `${curDate.getMonth()+1}/${curDate.getDate()}/${curDate.getFullYear()}`;
     
-    let newGoal = {...goal, id: uuid(), start: parseDate, milestones: [{}]};
+    let newGoal = {...goal, id: uuid(), start: parseDate, milestones: []};
 
     this.setState(state => ({
       goal: [...state.goal, newGoal]
     }));
+  }
+
+  // Function that stores any changes to an individual goal
+  updateGoal(goal) {
+    // Make a copy of the goal array
+    let updateArr = this.state.goal;
+    let idx = 0;
+
+    // Find the corresponding entry
+    for (idx = 0; idx < updateArr.length; idx++) {
+      if (updateArr[idx].id === goal.id ) {
+        break;
+      }
+    }
+
+    // updateArr.forEach((cur, idx) => {
+    //   if(cur.id === goal.id) {
+    //     activeItem = idx;
+    //     break;
+    //   }
+    // });
+
+    // update to goal
+    updateArr[idx] = goal;
+    
+    // set state
+    this.setState({ goal: updateArr});
+
+    // update local storage
+    this.updateLocalStorage();
   }
 
   componentDidMount() {
@@ -36,7 +67,6 @@ export default class Planner extends Component {
 
   // Function that executes whenever changes affect the React component
   componentDidUpdate() {
-    console.log('Component Updated');
     this.updateLocalStorage();
   }
 
@@ -47,24 +77,17 @@ export default class Planner extends Component {
 
   render() {
 
-    // Temporary values for testing
-    let tempMilestones = [{          
-      title: 'Milestone',
-      desc: 'Do something by',
-      target: '08/01/2020',
-      actual: '02/10/2020'
-    }];
-
     let goals = this.state.goal.map(goal => {
       return (
-        <Goal 
+        <Goal
+          updateGoal={this.updateGoal} 
           title={goal.title}
           desc={goal.desc }
           start={goal.start}
           target={goal.target}
           key={goal.id}
           id={goal.id}
-          milestones={tempMilestones}
+          milestones={goal.milestones}
         />
       );
     });

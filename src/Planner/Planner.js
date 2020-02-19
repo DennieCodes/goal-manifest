@@ -15,10 +15,6 @@ export default class Planner extends Component {
   
   // Function that adds the goal from GoalForm onto the state array: goal
   addGoal(goal) {
-
-    // You need to parse the target date to the correct format below
-    // yyyy/mm/dd
-    // str.substr(start, length)
     let parsedTarget = `${goal.target.substr(8, 2)}/${goal.target.substr(5, 2)}/${goal.target.substr(0, 4)}`;
     goal.target = parsedTarget;
 
@@ -83,7 +79,3 @@ export default class Planner extends Component {
     )
   }
 }
-
-// 1. Title and Description
-// 2. Index of goals
-// 3. Goal add form

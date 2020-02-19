@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Milestone from './Milestone';
+import MilestoneForm from './MilestoneForm';
 import './Goal.css';
 
 export default class Goal extends Component {
@@ -44,6 +45,8 @@ export default class Goal extends Component {
             </tbody>
           </table>
 
+          <h2 className="milestone-form-title">Add a Milestone to your goal</h2>
+          <MilestoneForm />
         </section>
       </div>
     )

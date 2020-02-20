@@ -32,7 +32,8 @@
 }
 
 .goal-subcard {
-  margin: 0 1.5rem;
+  padding: 0 1.5rem;
+  width: 95%; 
 }
 
 .goal-card__dates {
@@ -57,7 +58,6 @@
   background-color: #BDDDEA;
 }
 
-
 .milestone-header > th{
   border: 2px solid #5B879B;
 }
@@ -68,6 +68,16 @@
   padding: 0 1rem;
 }
 
+.milestone-form-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  height: 3rem;
+  padding: 1rem 0 0 1rem;
+  margin: 2rem 0 1.5rem 0;
+  color: white;
+  background-color: #07441F;
+}
+
 .milestone-desc {
   width: 30rem;
   text-align: left;
@@ -75,8 +85,21 @@
 }
 
 .milestone-date {
-  width: 5rem;
+  font-size: 1rem;
+  width: 7rem;
   text-align: center;
+}
+
+.milestone-tool {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.milestone-delete {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .milestone__row > td{

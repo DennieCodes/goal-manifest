@@ -31,31 +31,16 @@ export default class Planner extends Component {
 
   // Function that stores any changes to an individual goal
   updateGoal(goal) {
-    // Make a copy of the goal array
     let updateArr = this.state.goal;
     let idx = 0;
 
-    // Find the corresponding entry
-    for (idx = 0; idx < updateArr.length; idx++) {
-      if (updateArr[idx].id === goal.id ) {
-        break;
-      }
+    while(updateArr[idx].id !== goal.id) {
+      idx++;
     }
 
-    // updateArr.forEach((cur, idx) => {
-    //   if(cur.id === goal.id) {
-    //     activeItem = idx;
-    //     break;
-    //   }
-    // });
-
-    // update to goal
     updateArr[idx] = goal;
-    
-    // set state
     this.setState({ goal: updateArr});
 
-    // update local storage
     this.updateLocalStorage();
   }
 

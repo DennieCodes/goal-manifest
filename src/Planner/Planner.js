@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Goal from './Goal';
 import GoalForm from './GoalForm';
 import uuid from 'uuid/v4';
-import './Planner.css';
 
 export default class Planner extends Component {
   constructor(props) {
@@ -44,6 +43,7 @@ export default class Planner extends Component {
     this.updateLocalStorage();
   }
 
+  // Function that executes when component is mounted.  Loads local storage goal array into state
   componentDidMount() {
     this.setState({
       goal: JSON.parse(window.localStorage.getItem("goal")) || []
@@ -78,12 +78,10 @@ export default class Planner extends Component {
     });
 
     return (
-      <div className="planner">
-        <section className="section--row">
-          {goals}
-          <GoalForm addGoal={this.addGoal}/>        
-        </section>
-      </div>
+      <section className="wrapper--row planner">
+        {goals}
+        <GoalForm addGoal={this.addGoal}/>        
+      </section>
     )
   }
 }

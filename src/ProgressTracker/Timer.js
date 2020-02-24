@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Timer.css';
 
 export default class Timer extends Component {
   render() {
@@ -9,7 +8,7 @@ export default class Timer extends Component {
     let seconds = secondParse < 10 ? `0${secondParse}` : secondParse;
 
     return (
-      <div className="timer">
+      <div className="pomodoro-timer">
         {minutes}:{seconds}
       </div>
     )

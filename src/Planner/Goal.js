@@ -95,7 +95,6 @@ export default class Goal extends Component {
           {milestoneList}          
 
           <h2 className="milestone-form-title">Add a Milestone to your goal</h2>
-          
           <MilestoneForm addMilestone={this.addMilestone}/>
         </section>
       </div>

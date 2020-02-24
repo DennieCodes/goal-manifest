@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './ProgressTracker.css';
 import Activity from './Activity';
 import ActivityForm from './ActivityForm';
 import uuid from 'uuid/v4';
@@ -104,12 +103,10 @@ export default class ProgressTracker extends Component {
     )});
 
     return (
-      <div className="progress-tracker">
-        <section className="section--row">
-          {activities}
-          <ActivityForm addActivity={this.addActivity} />
-        </section>        
-      </div>
+      <section className="wrapper--row progress-tracker">
+        {activities}
+        <ActivityForm addActivity={this.addActivity} />
+      </section>        
     );
   }
 }

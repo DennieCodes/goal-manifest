@@ -1,0 +1,41 @@
+.pomodoro {
+  align-items: center;
+  width: 20rem;
+  border: 20px solid #5B879B;
+  background-color: #BDDDEA;
+  padding: 3rem;
+
+  &-timer {
+    font-size: 6rem;
+    min-width: 17rem;
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+    color: #00080C;  
+  }
+
+  &-timer-section {
+    margin-bottom: 2rem;
+  }
+
+  &-controls {
+    width: 100%;
+    justify-content: space-between;  
+  }
+
+  &-notice {
+    width: 100%;
+    background-color: #07441F;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;  
+  }
+
+  &__button {
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: #64B183;
+    color: white;
+    cursor: pointer;  
+  }
+}

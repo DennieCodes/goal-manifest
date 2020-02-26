@@ -1,9 +1,0 @@
-.goal-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.goal-form__button {
-  margin-top: 1rem;
-  margin-left: 12rem;
-}

@@ -14,12 +14,12 @@ export default class Milestone extends Component {
   
   render() {
     return (
-      <tr className="milestone__row">
-        <td className="milestone-title">{this.props.title}</td>
-        <td className="milestone-desc">{this.props.desc}</td>
-        <td className="milestone-date">{this.props.target}</td>
-        <td className="milestone-tool">
-        <button onClick={this.handleSubmit} className="milestone-delete">X</button>
+      <tr className="card-table__row">
+        <td className="card-table__title">{this.props.title}</td>
+        <td className="card-table__desc">{this.props.desc}</td>
+        <td className="card-table__date">{this.props.target}</td>
+        <td className="card-table__tool">
+        <button onClick={this.handleSubmit} className="icon-delete">X</button>
         </td>
       </tr>
     )

@@ -1,0 +1,82 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  align-items: center;
+  padding: 2rem 3rem;
+  margin: 1rem;
+  height: 0%;
+
+  // Alternate sizing for different cards
+  &--activity {
+    width: 29rem;
+  }
+
+  &-milestone {
+    margin-bottom: 2rem;
+  }
+
+  &--goal {
+    width: 53rem;
+  }
+
+  &-header {
+    width: 100%;
+    margin-bottom: 2rem;
+
+  }
+
+  &-title {
+    font-size: 1.75rem;
+    margin: 1.5rem 0;
+  }
+
+  &-subtitle {
+    font-size: 1.5rem;
+  }
+
+  &-desc {
+    background: #ededed;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 2px solid #e5e5e5;
+    font-size: 1.4rem;
+  }
+
+  &-controls {
+    justify-content: flex-end;
+  }
+
+  &-controls__button {
+    font-size: 2rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    color: grey;
+    cursor: pointer;
+  }
+
+  &-dates {
+    font-size: 1.4rem;
+  
+    &__label {
+      margin-left: 1rem;
+      font-weight: 600;
+      color: #003333;    
+    }
+  }
+
+  // All styling for subcards
+  &-subcard {
+    width: 100%;
+    
+    &-title {
+      font-size: 1.5rem;
+      font-weight: 400;
+      height: 3rem;
+      padding: 1rem 0 0 1rem;
+      margin: 1.5rem 0;
+      color: white;
+      background-color: #07441F;
+    }
+  }
+}
+

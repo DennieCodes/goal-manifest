@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './GoalForm.css';
 
 export default class GoalForm extends Component {
   constructor(props) {
@@ -33,33 +32,33 @@ export default class GoalForm extends Component {
 
   render() {
     return (
-      <div className="goal-card">
-        <header className="goal-card-header">
-          <h3 className="goal-card__title">Add a Goal</h3>
-          <p className="goal-card__desc">Add a goal, a description and your target date to complete this goal</p>
+      <div className="card wrapper card--goal">
+        <header className="card-header">
+          <h3 className="card-title">Add a Goal</h3>
+          <p className="card-desc">Add a goal, a description and your target date to complete this goal</p>
         </header>
         
-        <form className="goal-form" onSubmit={this.handleSubmit}>
-          <label className="activity-form__label" htmlFor="title">Title</label>  
-          <input className="activity-form__input" type="text" id="title" name="title" 
+        <form className="card-form wrapper" onSubmit={this.handleSubmit}>
+          <label className="card-form__label" htmlFor="title">Title</label>  
+          <input className="card-form__input" type="text" id="title" name="title" 
             value={this.state.title}
             onChange={this.handleChange}>
           </input>
 
-          <label className="activity-form__label" htmlFor="desc">Description</label>  
-          <textarea className="activity-form__input" type="text" id="desc" name="desc" rows="3"
+          <label className="card-form__label" htmlFor="desc">Description</label>  
+          <textarea className="card-form__input" type="text" id="desc" name="desc" rows="3"
             value={this.state.desc}
             onChange={this.handleChange}>
           </textarea>
 
-          <div className="activity-form__row-grouping">
-            <label className="activity-form__label" htmlFor="title">Target Date</label>  
-            <input className="activity-form__input" type="date" id="target" name="target"
+          <div className="card-form__row--controls">
+            <label className="card-form__label" htmlFor="title">Target Date</label>  
+            <input className="card-form__input" type="date" id="target" name="target"
               value={this.state.target}
               onChange={this.handleChange}>
             </input>      
 
-            <button className="activity-form__button goal-form__button">Submit</button>
+            <button className="card-form__button card-form__button--short">Submit</button>
           </div>
         </form>
       </div>

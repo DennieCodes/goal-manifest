@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Timer from './Timer';
-import './Pomodoro.css';
 
 export default class Pomodoro extends Component {
   constructor(props) {
@@ -20,7 +19,8 @@ export default class Pomodoro extends Component {
 
   // Function is executed when the component is unmounted
   componentWillUnmount() {
-    clearInterval(this.state.timerId);
+    // Note: 
+    // clearInterval(this.state.timerId);
   }
 
   // onClick Function that resets the timer value
@@ -122,20 +122,20 @@ export default class Pomodoro extends Component {
       </audio> : "";
 
     return (
-      <div className="pomodoro">
-        <section className="section-timer" >
+      <div className="pomodoro wrapper">
+        <section className="pomodoro-timer-section" >
           <Timer timer={ this.state.timer }/>
         </section>
 
-        <section className="section-notice">
-          <h3 className="section-notice-msg">{noticeMsg}</h3>
+        <section className="pomodoro-notice">
+          <h3 className="pomodoro-notice-msg">{noticeMsg}</h3>
           {alarm} 
         </section>
         
-        <section className="section-controls">
-          <button className="controls-button" onClick={this.startTimer}>Start</button>
-          <button className="controls-button" onClick={this.stopTimer}>Stop</button>
-          <button className="controls-button" onClick={this.resetTimer}>Restart</button>
+        <section className="pomodoro-controls wrapper--row">
+          <button className="pomodoro__button" onClick={this.startTimer}>Start</button>
+          <button className="pomodoro__button" onClick={this.stopTimer}>Stop</button>
+          <button className="pomodoro__button" onClick={this.resetTimer}>Restart</button>
         </section>
       </div>
     )

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './MilestoneForm.css';
 
 export default class MilestoneForm extends Component {
   constructor(props) {
@@ -33,27 +32,27 @@ export default class MilestoneForm extends Component {
 
   render() {
     return (
-      <form className="milestone-form" onSubmit={this.handleSubmit}>
-        <label className="milestone-form__label" htmlFor="milestoneTitle">Title</label>  
-        <input className="milestone-form__input" type="text" id="milestoneTitle" name="title" 
+      <form className="card-form--milestone wrapper" onSubmit={this.handleSubmit}>
+        <label className="card-form__label" htmlFor="milestoneTitle">Title</label>  
+        <input className="card-form__input" type="text" id="milestoneTitle" name="title" 
           value={this.state.title}
           onChange={this.handleChange}>
         </input>
 
-        <label className="milestone-form__label" htmlFor="milestoneDesc">Description</label>
-        <textarea className="milestone-form__input" type="text" id="milestoneDesc" name="desc" rows="3"
+        <label className="card-form__label" htmlFor="milestoneDesc">Description</label>
+        <textarea className="card-form__input" type="text" id="milestoneDesc" name="desc" rows="3"
           value={this.state.desc}
           onChange={this.handleChange}>
         </textarea>
 
-        <section className="milestone-subform">
-          <label className="milestone-form__label" htmlFor="milestoneTarget">Target Date</label>
-          <input className="milestone-form__input--date" type="date" id="milestoneTarget" name="target"
+        <section className="card-form__row--controls">
+          <label className="card-form__label" htmlFor="milestoneTarget">Target Date</label>
+          <input className="card-form__input--date" type="date" id="milestoneTarget" name="target"
             value={this.state.target}
             onChange={this.handleChange}>
           </input>
 
-          <button className="milestone__button">Add Milestone</button>
+          <button className="card-form__button card-form__button--short">Add Milestone</button>
         </section>
       </form>
     )

@@ -39,14 +39,14 @@ export default class Activity extends Component {
           breakLength={breakLength}
         />
 
-        <section className="card-header">
+        <header className="card-header">
           <h2 className="card-title">{this.props.title}</h2>
           <p className="card-desc">{desc}</p>
           
           <div className="card-controls wrapper--row">
             <button onClick={this.handleSubmit} className="card-controls__button">X</button>
           </div>
-        </section>
+        </header>
       </div>
     )
   }

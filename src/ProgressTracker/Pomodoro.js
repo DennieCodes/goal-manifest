@@ -19,7 +19,8 @@ export default class Pomodoro extends Component {
 
   // Function is executed when the component is unmounted
   componentWillUnmount() {
-    clearInterval(this.state.timerId);
+    // Note: 
+    // clearInterval(this.state.timerId);
   }
 
   // onClick Function that resets the timer value

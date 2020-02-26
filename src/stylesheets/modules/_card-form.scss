@@ -1,0 +1,61 @@
+// All styling for forms within cards
+.card-form {
+  width: 100%;
+
+  &--milestone {
+    padding: 1.5rem;
+    border: 2px solid #07441F;
+  }
+
+  &__row {
+    margin-top: .75rem;
+    align-self: center;
+  
+    &--controls {
+      margin-top: 2rem;
+      align-self: flex-end;
+    }
+  }
+
+  &__label {
+    font-size: 1.25rem;
+    margin: .5rem;      
+  }
+
+  &__button {
+    align-self: center;
+    margin-top: 2rem;
+    width: 20rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    background-color: #5B879B;
+    color: white;
+    cursor: pointer;
+
+    &--short {
+      margin: 0 2rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  &__input {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    padding-left: .5rem;
+
+    &--date {
+      font-size: 1.25rem;
+      height: 2.5rem;
+      width: 10rem;
+      padding-left: 1rem;
+    }
+  
+    &--short {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      padding-left: .5rem;
+      margin-left: .5rem;
+      width: 2rem;
+    }
+  }
+}

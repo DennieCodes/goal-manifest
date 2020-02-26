@@ -78,7 +78,7 @@ export default class Planner extends Component {
     });
 
     return (
-      <section className="wrapper--row planner">
+      <section className="planner wrapper--row">
         {goals}
         <GoalForm addGoal={this.addGoal}/>        
       </section>

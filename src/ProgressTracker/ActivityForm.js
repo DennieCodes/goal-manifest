@@ -49,14 +49,14 @@ export default class ActivityForm extends Component {
 
   render() {
     return (
-      <div className="wrapper card card--activity">
-        <section className="card-header">
+      <div className="card card--activity wrapper">
+        <header className="card-header">
           <h3 className="card-title">Add an Activity</h3>
           <p className="card-desc">
             Enter the Activity that you'd like to track, a brief description, the length of time 
             for each cycle and the break time.
           </p>
-        </section>
+        </header>
         
         <form className="card-form wrapper" onSubmit={this.handleSubmit}>
           <label className="card-form__label" htmlFor="title">Title</label>

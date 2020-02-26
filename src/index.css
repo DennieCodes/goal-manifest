@@ -95,6 +95,12 @@ input[type=number]::-webkit-outer-spin-button {
 .card--activity {
   width: 29rem;
 }
+.card-milestone {
+  margin-bottom: 2rem;
+}
+.card--goal {
+  width: 53rem;
+}
 .card-header {
   width: 100%;
   margin-bottom: 2rem;
@@ -102,6 +108,9 @@ input[type=number]::-webkit-outer-spin-button {
 .card-title {
   font-size: 1.75rem;
   margin: 1.5rem 0;
+}
+.card-subtitle {
+  font-size: 1.5rem;
 }
 .card-desc {
   background: #ededed;
@@ -121,12 +130,41 @@ input[type=number]::-webkit-outer-spin-button {
   color: grey;
   cursor: pointer;
 }
+.card-dates {
+  font-size: 1.4rem;
+}
+.card-dates__label {
+  margin-left: 1rem;
+  font-weight: 600;
+  color: #003333;
+}
+.card-subcard {
+  width: 100%;
+}
+.card-subcard-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  height: 3rem;
+  padding: 1rem 0 0 1rem;
+  margin: 1.5rem 0;
+  color: white;
+  background-color: #07441F;
+}
+
 .card-form {
   width: 100%;
+}
+.card-form--milestone {
+  padding: 1.5rem;
+  border: 2px solid #07441F;
 }
 .card-form__row {
   margin-top: 0.75rem;
   align-self: center;
+}
+.card-form__row--controls {
+  margin-top: 2rem;
+  align-self: flex-end;
 }
 .card-form__label {
   font-size: 1.25rem;
@@ -142,10 +180,20 @@ input[type=number]::-webkit-outer-spin-button {
   color: white;
   cursor: pointer;
 }
+.card-form__button--short {
+  margin: 0 2rem;
+  font-size: 1.25rem;
+}
 .card-form__input {
   font-size: 1.25rem;
   line-height: 2rem;
   padding-left: 0.5rem;
+}
+.card-form__input--date {
+  font-size: 1.25rem;
+  height: 2.5rem;
+  width: 10rem;
+  padding-left: 1rem;
 }
 .card-form__input--short {
   font-size: 1.25rem;
@@ -153,4 +201,47 @@ input[type=number]::-webkit-outer-spin-button {
   padding-left: 0.5rem;
   margin-left: 0.5rem;
   width: 2rem;
+}
+
+.card-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1.25rem;
+}
+.card-table__title {
+  width: 15rem;
+  text-align: left;
+  padding: 0 1rem;
+}
+.card-table__desc {
+  width: 30rem;
+  text-align: left;
+  padding: 0 1rem;
+}
+.card-table__date {
+  font-size: 1rem;
+  width: 7rem;
+  text-align: center;
+}
+.card-table__tool {
+  font-size: 1rem;
+  text-align: center;
+}
+.card-table__header {
+  height: 2.5rem;
+  background-color: #BDDDEA;
+}
+.card-table__header > th {
+  border: 2px solid #5B879B;
+}
+.card-table__row > td {
+  height: 2.25rem;
+  border: 2px solid #5B879B;
+}
+
+.icon-delete {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
